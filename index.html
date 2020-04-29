@@ -26,8 +26,11 @@
         <div class="navbar-start">
 
           <div class="navbar-item has-dropdown is-hoverable">
-            <a class="navbar-link">
-              Scene
+            <a id="scene-switcher" class="scene-link">
+              <div class="column">
+                <h2>Scene</h2>
+                <h3>Abandoned Cave</h3>
+              </div>
             </a>
 
             <div class="navbar-dropdown">
@@ -52,72 +55,32 @@
       </div>
     </nav>
 
-<div id="toolset" class="columns">
-  <div id="chat" class="column p-16">
-    <ul>
-      <li><strong>Someone</strong> said something</li>
-      <li><strong>Someone</strong> did something</li>
-      <li><strong>Someone</strong> farted</li>
-      <li><strong>Someone</strong> said something</li>
-      <li><strong>Someone</strong> did something</li>
-      <li><strong>Someone</strong> said something</li>
-      <li><strong>Someone</strong> said something</li>
-      <li><strong>Someone</strong> did something</li>
-      <li><strong>Someone</strong> said something</li>
-      <li><strong>Someone</strong> said something</li>
-      <li><strong>Someone</strong> did something</li>
-      <li><strong>Someone</strong> said something</li>
-      <li><strong>Someone</strong> said something</li>
-      <li><strong>Someone</strong> did something</li>
-      <li><strong>Someone</strong> said something</li>
-    </ul>
-  </div>
-  <div class="column is-1 is-gapless">
-    <div class="column">
-      <div class="orb small-orb">
-        <svg width="20" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path fill-rule="evenodd" clip-rule="evenodd" d="M17.138 0C17.9337 0 18.6968 0.316454 19.259 0.879604C19.8221 1.44162 20.1385 2.20453 20.1385 3.0001C20.1385 3.79568 19.8221 4.55858 19.259 5.1206L10.505 13.8756C10.58 12.7646 10.21 11.6286 9.36 10.7786C8.54285 9.96597 7.41331 9.54787 6.264 9.6326L15.017 0.879604C15.5792 0.316454 16.3423 0 17.138 0ZM1.49125 15.6392C1.43852 14.5771 1.38726 13.5449 2.739 12.1936C3.66896 11.2636 5.02441 10.9004 6.29476 11.2408C7.56512 11.5812 8.55737 12.5735 8.89776 13.8438C9.23815 15.1142 8.87496 16.4696 7.945 17.3996C5.163 20.1826 0 19.5266 0 19.5266C1.60458 17.9215 1.54709 16.7637 1.49125 15.6392Z" fill="url(#draw)"/>
-        <defs>
-        <linearGradient id="draw" x1="10.0693" y1="-8.84148" x2="-7.55766" y2="11.2332" gradientUnits="userSpaceOnUse">
-        <stop stop-color="#1995FF"/>
-        <stop offset="1" stop-color="#19C3FF"/>
-        </linearGradient>
-        </defs>
-        </svg>
-      </div>
+  <div id="chat">
+    <div id="messages">
+      <ul>
+        <li class="chat-message"><strong class="chat-1">Someone</strong> said something and it was really long. Really long.</li>
+        <li class="chat-message"><strong class="chat-4">Someone</strong> did something</li>
+        <li class="chat-message"><strong class="chat-2">Someone</strong> farted</li>
+        <li class="chat-message"><strong class="chat-2">Someone</strong> said something</li>
+        <li class="chat-message"><strong class="chat-4">Someone</strong> did something</li>
+        <li class="chat-message"><strong class="chat-3">Someone</strong> said something</li>
+        <li class="chat-message"><strong class="chat-2">Someone</strong> said something</li>
+        <li class="chat-message"><strong class="chat-1">Someone</strong> did something</li>
+        <li class="chat-message"><strong class="chat-3">Someone</strong> said something</li>
+        <li class="chat-message"><strong class="chat-2">Someone</strong> said something</li>
+        <li class="chat-message"><strong class="chat-4">Someone</strong> did something</li>
+        <li class="chat-message"><strong class="chat-2">Someone</strong> said something</li>
+        <li class="chat-message"><strong class="chat-3">Someone</strong> said something</li>
+        <li class="chat-message"><strong class="chat-4">Someone</strong> did something</li>
+        <li class="chat-message"><strong class="chat-2">Someone</strong> said something</li>
+      </ul>
     </div>
-    <div class="column">
-      <div id="d20" class="orb">
-        <svg width="32" height="36" viewBox="0 0 32 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path fill-rule="evenodd" clip-rule="evenodd" d="M31.4459 25.1783L28.3598 23.0217C28.2042 22.9129 28.1416 22.7131 28.2074 22.5352L31.4459 13.7745V25.1783Z" fill="#13D897"/>
-        <path fill-rule="evenodd" clip-rule="evenodd" d="M16.3656 34.9686C16.277 35.0195 16.1626 35.0199 16.0739 34.9686L15.7119 34.76L7.42608 24.5698C7.20417 24.297 7.39873 23.8893 7.75069 23.8893H24.6887C25.0407 23.8893 25.2352 24.297 25.0134 24.5698L16.7276 34.76L16.3656 34.9686Z" fill="#0DAB77"/>
-        <path fill-rule="evenodd" clip-rule="evenodd" d="M0.993706 13.7746L4.23206 22.5351C4.29786 22.713 4.23525 22.9129 4.0796 23.0216L0.993706 25.1781V13.7746Z" fill="#0EBA81"/>
-        <path fill-rule="evenodd" clip-rule="evenodd" d="M16.5819 6.33367L25.4864 21.735C25.6474 22.0133 25.4462 22.3612 25.1244 22.3612H7.31513C6.99335 22.3612 6.79219 22.0132 6.95314 21.735L15.8578 6.33367C16.0186 6.05532 16.4209 6.05532 16.5819 6.33367Z" fill="#00F9A7"/>
-        <path fill-rule="evenodd" clip-rule="evenodd" d="M31.3229 9.69446L27.3292 20.4978C27.2065 20.8296 26.7521 20.8684 26.575 20.562L18.3374 6.314C18.1499 5.98961 18.4519 5.60176 18.8129 5.70349L31.0441 9.14812C31.2788 9.21418 31.4073 9.46604 31.3229 9.69446Z" fill="#6BFFCE"/>
-        <path fill-rule="evenodd" clip-rule="evenodd" d="M14.091 6.33343L5.86445 20.562C5.68734 20.8684 5.23291 20.8296 5.11016 20.4978L1.14558 9.77277C1.06139 9.54517 1.18862 9.29413 1.4222 9.22702L13.6132 5.72351C13.9748 5.61966 14.2791 6.0081 14.091 6.33343Z" fill="#13D897"/>
-        <path fill-rule="evenodd" clip-rule="evenodd" d="M4.80205 24.382C4.98175 24.2565 5.22807 24.2909 5.36626 24.4609L12.0012 32.6206L1.59647 26.6221L4.80205 24.382Z" fill="#039766"/>
-        <path fill-rule="evenodd" clip-rule="evenodd" d="M27.0732 24.4608C27.2114 24.2908 27.4577 24.2564 27.6374 24.3819L30.843 26.622L20.4383 32.6206L27.0732 24.4608Z" fill="#13D897"/>
-        <path fill-rule="evenodd" clip-rule="evenodd" d="M27.9047 6.67644L17.2895 3.687C17.1093 3.63625 16.9849 3.47212 16.9849 3.28526V0.380951L27.9047 6.67644Z" fill="#AEFFE4"/>
-        <path fill-rule="evenodd" clip-rule="evenodd" d="M15.4546 0.380707V3.29007C15.4546 3.47623 15.3313 3.63978 15.1522 3.69123L4.30599 6.8083L15.4546 0.380707Z" fill="#6BFFCE"/>
-        </svg>
-      </div>
+
+    <div id="new-message">
+      <input class="input" type="text" placeholder="Text input">
     </div>
-    <div class="column">
-      <div class="orb small-orb">
-        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path fill-rule="evenodd" clip-rule="evenodd" d="M18.9426 0.0125473C19.232 -0.0360981 19.5271 0.0584241 19.7344 0.266193C19.9416 0.473898 20.0363 0.76852 19.989 1.05804L19.0799 6.51278C19.0416 6.74368 18.9155 6.95084 18.728 7.09098L8.96224 14.4149L7.75584 13.2085L16.3925 4.5718L15.4279 3.60722L6.79126 12.2439L5.58394 11.0375L12.9097 1.2735C13.0499 1.08618 13.257 0.960158 13.4879 0.921671L18.9426 0.0125473ZM3.90388 10.7357L9.26589 16.0968C9.43593 16.2684 9.66792 16.3644 9.90955 16.3631L11.8187 16.3631L11.8187 18.1814L9.90955 18.1814C9.18134 18.1814 8.49586 17.8977 7.98039 17.3813L6.85035 16.2513L3.37023 19.7314C3.20046 19.9032 2.96899 19.9999 2.72748 19.9999C2.48596 19.9999 2.25449 19.9032 2.08472 19.7314L0.266478 17.9132C0.0958762 17.743 0 17.5119 0 17.2709C0 17.0299 0.0958762 16.7988 0.266478 16.6286L3.74569 13.1485L2.61747 12.0212C2.10927 11.5111 1.81835 10.8084 1.81835 10.0911L1.81835 8.18193H3.6366L3.6366 10.0911C3.6376 10.3327 3.7336 10.5642 3.90388 10.7357Z" fill="url(#attack)"/>
-        <defs>
-        <linearGradient id="attack" x1="10.0005" y1="-9.02466" x2="-8.04874" y2="10.9762" gradientUnits="userSpaceOnUse">
-        <stop stop-color="#FF7319"/>
-        <stop offset="1" stop-color="#E82F2F"/>
-        </linearGradient>
-        </defs>
-        </svg>
-      </div>
   </div>
-  </div>
-  <div class="column"></div>
-</div>
+
 
   <!-- <div id="toolset" class="columns p-24 is-centered">
     <div class="column"></div>

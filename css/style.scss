@@ -1,7 +1,26 @@
+@font-face {
+    font-family: 'Rough Cut';
+    src: url('../assets/RoughCut-RegularClean.woff2') format('woff2'),
+        url('../assets/RoughCut-RegularClean.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 $primary-color: #E20505;
 $secondary-color: #CEC5AC;
 $link-active: #FFF;
 
+$brand-font: 'Rough Cut';
+
+// Chat Colors
+$chat-1: #00FF8E;
+$chat-2: #C083EF;
+$chat-3: #F24651;
+$chat-4: #F5FFB6;
+$chat-5: #00FF8E;
+$chat-6: #00FF8E;
+$chat-7: #00FF8E;
+$chat-8: #00FF8E;
 
 .p-16 { padding:16px; }
 .p-24 { padding:24px; }
@@ -15,14 +34,18 @@ body {
   background: url('../img/bgs/cave.png') no-repeat;
   background-size: cover;
 }
-
+.navbar-brand h1 {
+  font-family: $brand-font;
+  font-size: 1.1rem;
+}
 #table-nav {
   background: linear-gradient(180deg, rgba(0, 0, 0, 6e-05) 0%, rgba(36, 38, 41, 0.6) 98.56%), #4B545B;
   border: 1px solid #23201C;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.16), inset 0px 1px 0px #6B7075, inset 0px -2px 2px rgba(0, 0, 0, 0.18);
   color:#FFF;
   width:100%;
-  justify-content: space-between;
+  height:64px;
+  text-shadow:0 1px rgba(0, 0, 0, 0.4);
 }
 
 #table-nav:before {
@@ -49,17 +72,27 @@ body {
 #table-nav a {
   color:$secondary-color;
 }
-#scene-nav .navbar-link {
-  align-content: center;
+
+#scene-nav .scene-link {
+  text-align:center;
   width:240px;
   background: linear-gradient(180deg, rgba(0, 0, 0, 4e-05) 0%, rgba(12, 14, 17, 0.4) 98.56%), #3F484F;
   border: 1px solid #1D2429;
 }
-#scene-nav .navbar-link:hover {
+#scene-nav .scene-link:hover {
   background: linear-gradient(180deg, rgba(0, 0, 0, 6.4e-05) 0%, rgba(12, 14, 17, 0.64) 98.56%), #3F484F;
   border: 1px solid #1D2429;
 }
 
+#scene-nav h2 {
+  font-size:0.6rem;
+  text-transform: uppercase;
+}
+#scene-nav h3 {
+  font-family:$brand-font;
+  font-size:0.9rem;
+  color:#FFF;
+}
 .navbar-start {
   flex-grow: 1; justify-content: center;
 }
@@ -74,29 +107,82 @@ span.link-active, #table-nav a.link-active {
   color:$link-active;
 }
 
+#scene-switcher div {
+  margin:auto 0;
+}
 // Begin Chat
+
+.chat-1 {color:$chat-1}
+.chat-2 {color:$chat-2}
+.chat-3 {color:$chat-3}
+.chat-4 {color:$chat-4}
+
 #toolset {
   width:100%;
   position:fixed;
-  bottom:0;
+  bottom:24px;
   margin:0 24px;
 }
 
 #chat {
+  display: flex;
+  flex-flow: column;
   height:230px;
-  max-width:440px;
+  max-width: 440px;
   background: rgba(30, 35, 39, 0.8);
   border: 2px solid #7E7165;
   box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.3);
-  margin:auto 0;
-  overflow:auto;
+  position:absolute;
+  bottom:24px;
+  left:24px;
 }
 
-#chat ul {
-  margin-top:auto;
+#messages {
+  flex-grow : 1;
+  overflow:auto;
+  font-size:0.9rem;
 }
+
+#messages ul {vertical-align:bottom;}
+
+.chat-message {
+  color:#FFF;
+  padding:4px 12px;
+  display:inline-block;
+  width:100%;
+}
+
+#chat input {
+  background: rgba(30, 35, 39, 0.8);
+  border:0;
+  border-top: 1px solid #000;
+  width:440px;
+  color:#FFF;
+  border-radius:0;
+}
+
+#chat input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: $secondary-color;
+}
+#chat input::-moz-placeholder { /* Firefox 19+ */
+  color: $secondary-color;
+}
+#chat input:-ms-input-placeholder { /* IE 10+ */
+  color: $secondary-color;
+}
+#chat input:-moz-placeholder { /* Firefox 18- */
+  color: $secondary-color;
+}
+
+
 // Begin Toolset
 
+#tools {
+
+}
+#tools .column {
+  text-align: center;
+}
 .orb {
   background: linear-gradient(180deg, rgba(0, 0, 0, 6e-05) 0%, rgba(36, 38, 41, 0.6) 98.56%), #4B545B;
   border: 1px solid #23201C;
