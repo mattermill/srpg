@@ -9,12 +9,6 @@
 	],
 "creatorBuild": "32137",
 "files": {
-	"/build": {
-		"ft": 65536,
-		"oA": 1,
-		"oAP": "/build/build",
-		"oF": 0
-		},
 	"/css/bulma.min-min.css": {
 		"aP": 1,
 		"bl": 0,
@@ -169,7 +163,7 @@
 	"displayValueWasSetByUser": 0,
 	"iconImageName": "brackets-koamaru",
 	"iconImageWasSetByUser": 0,
-	"lastBuiltDate": 609824939.04437494
+	"lastBuiltDate": 609874297.56563795
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,
@@ -1668,7 +1662,7 @@
 		},
 	"esLintSourceType": 0,
 	"externalServerAddress": "http://localhost:8888",
-	"gitIgnoreBuildFolder": 1,
+	"gitIgnoreBuildFolder": 0,
 	"hideConfigFile": 0,
 	"jsCheckerReservedNamesString": "",
 	"jsHintFlags2": {
