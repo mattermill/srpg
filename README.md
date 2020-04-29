@@ -1,6 +1,2 @@
 # srpg
-# srpg
-# srpg
-# srpg
-# srpg
-# srpg
+CSS and styles and stuff
