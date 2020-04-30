@@ -19,6 +19,8 @@
 body, html {
   height: 100%;
   overflow: hidden;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(0, 0, 0, 0.4) transparent;
 }
 
 body {
@@ -109,6 +111,10 @@ span.link-active, #table-nav a.link-active {
   margin: auto 0;
 }
 
+.navbar-dropdown a.navbar-item:hover {
+  background: #5B5C59;
+}
+
 .chat-1 {
   color: #00FF8E;
 }
@@ -125,21 +131,11 @@ span.link-active, #table-nav a.link-active {
   color: #F5FFB6;
 }
 
-#toolset {
-  width: 100%;
-  position: fixed;
-  bottom: 24px;
-  margin: 0 24px;
-}
-
 #chat {
   display: flex;
   flex-flow: column;
-  height: 230px;
-  max-width: 440px;
-  background: rgba(30, 35, 39, 0.8);
-  border: 2px solid #7E7165;
-  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.3);
+  max-height: 300px;
+  max-width: 480px;
   position: absolute;
   bottom: 24px;
   left: 24px;
@@ -149,46 +145,46 @@ span.link-active, #table-nav a.link-active {
   flex-grow: 1;
   overflow: auto;
   font-size: 0.9rem;
+  scrollbar-color: rgba(0, 0, 0, 0) transparent;
+  margin-bottom: 0.5rem;
+}
+
+#messages:hover {
+  scrollbar-color: rgba(0, 0, 0, 0.6) transparent;
 }
 
 #messages ul {
   vertical-align: bottom;
 }
 
+#messages .columns.is-gapless:last-child,
+#messages .columns.is-gapless:not(:last-child) {
+  margin-bottom: 0.5rem;
+}
+
 .chat-message {
-  color: #FFF;
   padding: 4px 12px;
   display: inline-block;
   width: 100%;
 }
 
+.message {
+  font-size: 0.8rem;
+  padding: 12px;
+}
+
+.message p.image {
+  margin: 0 12px 0 0;
+}
+
 #chat input {
-  background: rgba(30, 35, 39, 0.8);
-  border: 0;
-  border-top: 1px solid #000;
-  width: 440px;
-  color: #FFF;
-  border-radius: 0;
+  width: 25rem;
+  font-size: 0.9rem;
+  height: 50px;
 }
 
-#chat input::-webkit-input-placeholder {
-  /* Chrome/Opera/Safari */
-  color: #CEC5AC;
-}
-
-#chat input::-moz-placeholder {
-  /* Firefox 19+ */
-  color: #CEC5AC;
-}
-
-#chat input:-ms-input-placeholder {
-  /* IE 10+ */
-  color: #CEC5AC;
-}
-
-#chat input:-moz-placeholder {
-  /* Firefox 18- */
-  color: #CEC5AC;
+.is-logged-in {
+  font-size: 0.9rem;
 }
 
 #tools .column {
@@ -214,4 +210,23 @@ span.link-active, #table-nav a.link-active {
   width: 48px;
   height: 48px;
   padding: 12px;
+}
+
+#app {
+  position: absolute;
+  display: block;
+  font-size: 16px;
+  height: 100%;
+  width: 100%;
+  background: rgba(190, 210, 200, 0.25);
+}
+
+.container {
+  height: 100%;
+  width: 100%;
+  display: block;
+  background-size: 2em 2em;
+  /*   background-image: radial-gradient(circle, rgba(100, 100, 100, 0.5) 2px, rgba(0, 0, 0, 0) 2px); */
+  background-position: 1em 1em;
+  border: 1px solid rgba(100, 100, 100, 0.5);
 }

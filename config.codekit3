@@ -25,12 +25,6 @@
 		"oAP": "/build/assets/RoughCut-RegularClean.woff2",
 		"oF": 0
 		},
-	"/build": {
-		"ft": 65536,
-		"oA": 1,
-		"oAP": "/build/build",
-		"oF": 0
-		},
 	"/css/bulma.min-min.css": {
 		"aP": 1,
 		"bl": 0,
@@ -117,6 +111,28 @@
 		"oT": 1,
 		"q": 100
 		},
+	"/img/raptor.png": {
+		"ft": 32768,
+		"iS": 7071,
+		"oA": 0,
+		"oAP": "/build/img/raptor.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"oT": 1,
+		"q": 100
+		},
+	"/img/velociraptor.jpeg": {
+		"ft": 16384,
+		"iS": 50793,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/build/img/velociraptor.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"q": 100
+		},
 	"/index.html": {
 		"cB": 0,
 		"ft": 8192,
@@ -124,6 +140,17 @@
 		"oA": 0,
 		"oAP": "/build/index.html",
 		"oF": 0
+		},
+	"/js/fabric.min.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/build/js/fabric.min-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
 		},
 	"/node_modules": {
 		"ft": 65536,
@@ -185,7 +212,7 @@
 	"displayValueWasSetByUser": 0,
 	"iconImageName": "brackets-koamaru",
 	"iconImageWasSetByUser": 0,
-	"lastBuiltDate": 609882000.73859
+	"lastBuiltDate": 609898238.15293705
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,

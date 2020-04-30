@@ -7,12 +7,15 @@
     <link rel="stylesheet" href="css/bulma.min.css">
     <link rel="stylesheet" href="css/style.css">
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <script src="js/fabric.min.js"></script>
+
   </head>
   <body>
+
     <nav id="table-nav" class="navbar" role="navigation" aria-label="main navigation">
       <div class="navbar-brand">
         <a class="navbar-item">
-          <h1>Campaigns</h1>
+          <h1><i class="fas fa-caret-left"></i> Campaigns</h1>
         </a>
 
         <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
@@ -29,7 +32,7 @@
             <a id="scene-switcher" class="scene-link">
               <div class="column">
                 <h2>Scene</h2>
-                <h3>Abandoned Cave</h3>
+                <h3>Abandoned Cave <i class="fas fa-caret-down"></i></h3>
               </div>
             </a>
 
@@ -48,8 +51,13 @@
         </div>
 
         <div class="navbar-end">
-          <div class="navbar-item">
-            <a>Velociraptor</a>
+          <div class="navbar-item is-logged-in">
+            <figure class="media-left">
+              <p class="image is-24x24">
+                <img src="img/raptor.png">
+              </p>
+            </figure>
+            <a>Velociraptor <i class="fas fa-caret-down"></i></a>
           </div>
         </div>
       </div>
@@ -58,26 +66,71 @@
   <div id="chat">
     <div id="messages">
       <ul>
-        <li class="chat-message"><strong class="chat-1">Someone</strong> said something and it was really long. Really long.</li>
-        <li class="chat-message"><strong class="chat-4">Someone</strong> did something</li>
-        <li class="chat-message"><strong class="chat-2">Someone</strong> farted</li>
-        <li class="chat-message"><strong class="chat-2">Someone</strong> said something</li>
-        <li class="chat-message"><strong class="chat-4">Someone</strong> did something</li>
-        <li class="chat-message"><strong class="chat-3">Someone</strong> said something</li>
-        <li class="chat-message"><strong class="chat-2">Someone</strong> said something</li>
-        <li class="chat-message"><strong class="chat-1">Someone</strong> did something</li>
-        <li class="chat-message"><strong class="chat-3">Someone</strong> said something</li>
-        <li class="chat-message"><strong class="chat-2">Someone</strong> said something</li>
-        <li class="chat-message"><strong class="chat-4">Someone</strong> did something</li>
-        <li class="chat-message"><strong class="chat-2">Someone</strong> said something</li>
-        <li class="chat-message"><strong class="chat-3">Someone</strong> said something</li>
-        <li class="chat-message"><strong class="chat-4">Someone</strong> did something</li>
-        <li class="chat-message"><strong class="chat-2">Someone</strong> said something</li>
+        <li class="message columns is-gapless">
+          <div class="column is-narrow">
+              <p class="image is-24x24">
+                <img src="img/raptor.png">
+              </p>
+          </div>
+          <div class="column">
+            <strong class="chat-1">Someone</strong> said something and it was really long. Really long.
+          </div>
+        </li>
+        <li class="message columns is-gapless">
+          <div class="column is-narrow">
+              <p class="image is-24x24">
+                <img src="img/raptor.png">
+              </p>
+          </div>
+          <div class="column">
+            <strong class="chat-1">Someone</strong> did something
+          </div>
+        </li>
+        <li class="message columns is-gapless">
+          <div class="column is-narrow">
+              <p class="image is-24x24">
+                <img src="img/raptor.png">
+              </p>
+          </div>
+          <div class="column">
+            <strong class="chat-1">Someone</strong> did something
+          </div>
+        </li>
+        <li class="message columns is-gapless">
+          <div class="column is-narrow">
+              <p class="image is-24x24">
+                <img src="img/raptor.png">
+              </p>
+          </div>
+          <div class="column">
+            <strong class="chat-1">Someone</strong> did something
+          </div>
+        </li>
+        <li class="message columns is-gapless">
+          <div class="column is-narrow">
+              <p class="image is-24x24">
+                <img src="img/raptor.png">
+              </p>
+          </div>
+          <div class="column">
+            <strong class="chat-1">Someone</strong> did something
+          </div>
+        </li>
+        <li class="message columns is-gapless">
+          <div class="column is-narrow">
+              <p class="image is-24x24">
+                <img src="img/raptor.png">
+              </p>
+          </div>
+          <div class="column">
+            <strong class="chat-1">Someone</strong> did something
+          </div>
+        </li>
       </ul>
     </div>
 
     <div id="new-message">
-      <input class="input" type="text" placeholder="Text input">
+      <input class="input" type="text" placeholder="Enter a message or try /rolling…">
     </div>
   </div>
 

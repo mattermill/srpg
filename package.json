@@ -8,6 +8,7 @@
   "repository": {},
   "dependencies": {
     "bulma": "^0.8.2",
+    "fabric": "^3.6.3",
     "sass": "^1.26.5"
   }
 }
