@@ -25,6 +25,12 @@
 		"oAP": "/build/assets/RoughCut-RegularClean.woff2",
 		"oF": 0
 		},
+	"/build": {
+		"ft": 65536,
+		"oA": 1,
+		"oAP": "/build/build",
+		"oF": 0
+		},
 	"/css/bulma.min-min.css": {
 		"aP": 1,
 		"bl": 0,
@@ -105,6 +111,39 @@
 		"iS": 7169,
 		"oA": 0,
 		"oAP": "/build/img/deco-right.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"oT": 1,
+		"q": 100
+		},
+	"/img/player-bronks.png": {
+		"ft": 32768,
+		"iS": 10272,
+		"oA": 0,
+		"oAP": "/build/img/player-bronks.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"oT": 1,
+		"q": 100
+		},
+	"/img/portrait-border-gm.png": {
+		"ft": 32768,
+		"iS": 20694,
+		"oA": 0,
+		"oAP": "/build/img/portrait-border-gm.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"oT": 1,
+		"q": 100
+		},
+	"/img/portrait-border-player.png": {
+		"ft": 32768,
+		"iS": 17444,
+		"oA": 0,
+		"oAP": "/build/img/portrait-border-player.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 1,

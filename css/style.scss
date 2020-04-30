@@ -118,9 +118,75 @@ span.link-active, #table-nav a.link-active {
   background:#5B5C59;
 }
 
+// Table Controls
+
+#table-controls {
+  color:#FFF;
+  justify-content: space-between;
+
+}
+
+.portrait {
+  text-align: center;
+  font-size: 0.7rem;
+  text-shadow:0 1px rgba(0, 0, 0, 0.6);
+}
+
+.player-portrait, .gm-portrait {
+    width:48px;
+    height:48px;
+    position:relative;
+    box-shadow:0 2px 4px rgba(0, 0, 0, 0.4);
+    margin-bottom:6px;
+}
+
+.player-portrait:before{
+  content:'';
+  display:inline-block;
+  width:48px;
+  height:48px;
+  background:url('../img/portrait-border-player.png') no-repeat top left;
+  background-size: cover;
+  position:absolute;
+  top:0;
+  left:0;
+  z-index:1;
+}
+
+@keyframes bloodied {
+  0% {opacity:0;}
+  50% {opacity:0.2;}
+  100% {opacity:0;}
+}
+
+.near-death:after{
+  content:'';
+  display:inline-block;
+  width:48px;
+  height:48px;
+  background-color: #FF0000;
+  position:absolute;
+  top:0;
+  left:0;
+  animation-name: bloodied;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+.gm-portrait:before{
+  content:'';
+  display:inline-block;
+  width:48px;
+  height:48px;
+  background:url('../img/portrait-border-gm.png') no-repeat top left;
+  background-size: cover;
+  position:absolute;
+  top:0;
+  left:0;
+}
+
 
 // Begin Chat
-
 .chat-1 {color:$chat-1}
 .chat-2 {color:$chat-2}
 .chat-3 {color:$chat-3}
