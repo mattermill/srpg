@@ -7,8 +7,24 @@
 		"uuidString": "6ABD1979-1A98-40D5-862F-D4F736A211B6"
 		}
 	],
-"creatorBuild": "32137",
+"creatorBuild": "32147",
 "files": {
+	"/assets/Room-205.woff": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/build/assets/Room-205.woff",
+		"oF": 0
+		},
+	"/assets/Room-205.woff2": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/build/assets/Room-205.woff2",
+		"oF": 0
+		},
 	"/assets/RoughCut-RegularClean.woff": {
 		"cB": 0,
 		"ft": 8192,
@@ -31,47 +47,28 @@
 		"oAP": "/build/build",
 		"oF": 0
 		},
-	"/css/bulma.min-min.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "/build/css/bulma.min-min-min.css",
-		"oF": 0,
-		"oS": 3
-		},
-	"/css/bulma.min.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
+	"/createcampaign.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
 		"oA": 0,
-		"oAP": "/build/css/bulma.min-min.css",
-		"oF": 0,
-		"oS": 3
+		"oAP": "/build/createcampaign.html",
+		"oF": 0
 		},
-	"/css/style-min.css": {
-		"aP": 1,
+	"/css/abstracts/variables.scss": {
+		"aP": 0,
 		"bl": 0,
-		"ft": 16,
+		"dP": 10,
+		"ec": 1,
+		"ft": 4,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "/build/css/style-min-min.css",
-		"oF": 0,
-		"oS": 3
+		"oAP": "/build/css/abstracts/variables.css",
+		"oF": 1,
+		"oS": 0,
+		"sct": 0
 		},
-	"/css/style.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "/build/css/style-min.css",
-		"oF": 0,
-		"oS": 3
-		},
-	"/css/style.scss": {
+	"/css/app.scss": {
 		"aP": 0,
 		"bl": 0,
 		"dP": 10,
@@ -79,8 +76,190 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 0,
-		"oAP": "/build/css/style.css",
+		"oAP": "/build/css/app.css",
 		"oF": 0,
+		"oS": 0,
+		"sct": 0
+		},
+	"/css/base/reset.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"ec": 1,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/build/css/base/reset.css",
+		"oF": 1,
+		"oS": 0,
+		"sct": 0
+		},
+	"/css/base/shame.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"ec": 1,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/build/css/base/shame.css",
+		"oF": 0,
+		"oS": 0,
+		"sct": 0
+		},
+	"/css/base/typography.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"ec": 1,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/build/css/base/typography.css",
+		"oF": 0,
+		"oS": 0,
+		"sct": 0
+		},
+	"/css/components/buttons.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"ec": 1,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/build/css/components/buttons.css",
+		"oF": 0,
+		"oS": 0,
+		"sct": 0
+		},
+	"/css/components/cards.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"ec": 1,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/build/css/components/cards.css",
+		"oF": 0,
+		"oS": 0,
+		"sct": 0
+		},
+	"/css/layout/forms.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"ec": 1,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/build/css/layout/forms.css",
+		"oF": 0,
+		"oS": 0,
+		"sct": 0
+		},
+	"/css/layout/global.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"ec": 1,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/build/css/layout/global.css",
+		"oF": 1,
+		"oS": 0,
+		"sct": 0
+		},
+	"/css/layout/grid.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"ec": 1,
+		"ft": 4,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/build/css/layout/grid.css",
+		"oF": 0,
+		"oS": 0,
+		"sct": 0
+		},
+	"/css/layout/typography.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"ec": 1,
+		"ft": 4,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/build/css/layout/typography.css",
+		"oF": 0,
+		"oS": 0,
+		"sct": 0
+		},
+	"/css/main.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"ec": 1,
+		"ft": 4,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/build/css/main.css",
+		"oF": 0,
+		"oS": 0,
+		"sct": 0
+		},
+	"/css/pages/account.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"ec": 1,
+		"ft": 4,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/build/css/pages/account.css",
+		"oF": 0,
+		"oS": 0,
+		"sct": 0
+		},
+	"/css/pages/campaigns.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"ec": 1,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/build/css/pages/campaigns.css",
+		"oF": 0,
+		"oS": 0,
+		"sct": 0
+		},
+	"/css/pages/home.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"ec": 1,
+		"ft": 4,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/build/css/pages/home.css",
+		"oF": 0,
+		"oS": 0,
+		"sct": 0
+		},
+	"/css/pages/tabletop.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"ec": 1,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/build/css/pages/tabletop.css",
+		"oF": 1,
 		"oS": 0,
 		"sct": 0
 		},
@@ -89,6 +268,17 @@
 		"iS": 3133417,
 		"oA": 0,
 		"oAP": "/build/img/bgs/cave.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"oT": 1,
+		"q": 100
+		},
+	"/img/bgs/rune-bg.png": {
+		"ft": 32768,
+		"iS": 38182,
+		"oA": 0,
+		"oAP": "/build/img/bgs/rune-bg.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 1,
@@ -116,6 +306,36 @@
 		"opt": 1,
 		"oT": 1,
 		"q": 100
+		},
+	"/img/icon-bag.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/build/img/icon-bag.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 52780316221407,
+		"prP": 0
+		},
+	"/img/icon-media.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/build/img/icon-media.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 52780316221407,
+		"prP": 0
+		},
+	"/img/orb-border-64.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/build/img/orb-border-64.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 52780316221407,
+		"prP": 0
 		},
 	"/img/player-bronks.png": {
 		"ft": 32768,
@@ -161,6 +381,17 @@
 		"oT": 1,
 		"q": 100
 		},
+	"/img/rune-01.png": {
+		"ft": 32768,
+		"iS": 920,
+		"oA": 0,
+		"oAP": "/build/img/rune-01.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"oT": 1,
+		"q": 100
+		},
 	"/img/velociraptor.jpeg": {
 		"ft": 16384,
 		"iS": 50793,
@@ -190,6 +421,14 @@
 		"oF": 0,
 		"sC": 3,
 		"tS": 0
+		},
+	"/mycampaigns.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/build/mycampaigns.html",
+		"oF": 0
 		},
 	"/node_modules": {
 		"ft": 65536,
@@ -232,6 +471,22 @@
 		"rFN": 0,
 		"uCM": 0
 		},
+	"/tabletop.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/build/tabletop.html",
+		"oF": 0
+		},
+	"/test.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/build/test.html",
+		"oF": 0
+		},
 	"/Untitled": {
 		"cB": 0,
 		"ft": 8192,
@@ -251,7 +506,7 @@
 	"displayValueWasSetByUser": 0,
 	"iconImageName": "brackets-koamaru",
 	"iconImageWasSetByUser": 0,
-	"lastBuiltDate": 609898238.15293705
+	"lastBuiltDate": 610178154.99688697
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,

@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>sRPG</title>
+    <link rel="stylesheet" href="css/main.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <script src="js/fabric.min.js"></script>
+  </head>
+  <body id="tabletop">
+    <div class="page">
+      <header id="app-header" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+          <a class="navbar-item" href="index.html">
+            Index
+          </a>
+          <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+          </a>
+        </div>
+        <div class="navbar-menu">
+          <div class="navbar-start">
+            <a class="navbar-item is-active" href="mycampaigns.html">
+              My Campaigns
+            </a>
+          </div>
+          <div class="navbar-end">
+            <div class="navbar-item">
+              <div class="buttons">
+                <a class="button is-dark">
+                  Log in
+                </a>
+                <a class="button is-primary">
+                  Sign up
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <!-- Table Controls -->
+      <div class="page">
+        <div id="active-players" class="row is-narrow">
+          <div class="col portrait">
+            <figure class="gm-portrait">
+              <img src="../img/player-bronks.png">
+            </figure>
+            DM
+          </div>
+          <div class="col portrait">
+            <figure class="player-portrait">
+              <img src="../img/player-bronks.png">
+            </figure>
+            Bronks
+          </div>
+          <div class="col portrait">
+            <figure class="player-portrait near-death">
+              <img src="../img/player-bronks.png">
+            </figure>
+            Aroni
+          </div>
+          <div class="col portrait">
+            <figure class="player-portrait">
+              <img src="../img/player-bronks.png">
+            </figure>
+            Fayinor
+          </div>
+          <div class="col portrait">
+            <figure class="player-portrait">
+              <img src="../img/player-bronks.png">
+            </figure>
+            Loveless
+          </div>
+        </div>
+        <!-- Chat  -->
+        <div id="chat" class="col is-narrow p-0">
+          <div id="messages">
+            
+            <div class="row chat-message">
+              <figure class="media-left portrait">
+                <div class="player-portrait">
+                  <img src="../img/player-bronks.png">
+                </div>
+              </figure>
+              <div class="message-content tooltip">
+                <p><strong class="chat-color-3">Fayinor</strong> rolled <span class="roll tooltip">1d20 + 3</span> <span class="roll-total nat-20">23</span></p>
+                
+              </div>
+            </div>
+            <div class="row chat-message">
+              <figure class="media-left portrait">
+                <div class="player-portrait">
+                  <img src="../img/player-bronks.png">
+                </div>
+              </figure>
+              <div class="message-content">
+                <p><strong class="chat-color-1">Bronks</strong> rolled <span class="roll">1d20 + 4</span> <span class="roll-total">14</span></p>
+              </div>
+            </div>
+            <div class="row chat-message">
+              <figure class="media-left portrait">
+                <div class="player-portrait">
+                  <img src="../img/player-bronks.png">
+                </div>
+              </figure>
+              <div class="message-content">
+                <p class="emote"><strong class="chat-color-5">Loveless</strong> attempts to sneak into the shadows…</p>
+              </div>
+            </div>
+            <div class="row chat-message">
+              <figure class="media-left portrait">
+                <div class="player-portrait">
+                  <img src="../img/player-bronks.png">
+                </div>
+              </figure>
+              <div class="message-content">
+                <p><strong class="chat-color-2">Aroni:</strong> Hey guys I have to step out for a second. Shouldn't be more than 5 mins. Hey guys I have to step out for a second. Shouldn't be more than 5 mins.</p>
+              </div>
+            </div>
+            <div class="row chat-message">
+              <figure class="media-left portrait">
+                <div class="player-portrait">
+                  <img src="../img/player-bronks.png">
+                </div>
+              </figure>
+              <div class="message-content">
+                <p><strong class="chat-color-1">Bronks</strong> rolled <span class="roll">1d6 + 3</span> <span class="roll-total">7</span></p>
+              </div>
+            </div>
+            <div class="row chat-message">
+              <figure class="media-left portrait">
+                <div class="player-portrait">
+                  <img src="../img/player-bronks.png">
+                </div>
+              </figure>
+              <div class="message-content">
+                <p><strong class="chat-color-3">Fayinor</strong> rolled <span class="roll">1d20 + 6</span> <span class="roll-total">15</span></p>
+              </div>
+            </div>
+            
+          </div>
+          <input id="send-message" class="input" type="text" placeholder="Enter a message, or try /rolling…">
+        </div>
+        <!-- Actionbar -->
+        <div id="actionbar" class="row">
+          <div class="buttons">
+            <a class="button orb is-64x64">
+              <!-- Icon -->
+              <svg width="24" height="23" viewBox="0 0 24 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M20.3236 0C21.2986 0 22.2335 0.364905 22.9224 1.01427C23.6123 1.66234 24 2.54205 24 3.45943C24 4.37681 23.6123 5.25651 22.9224 5.90458L12.1964 16C12.2883 14.7189 11.8349 13.409 10.7934 12.4288C9.7922 11.4918 8.40822 11.0097 7 11.1074L17.7248 1.01427C18.4136 0.364905 19.3486 0 20.3236 0ZM1.81794 18.3356C1.75366 17.083 1.69117 15.8655 3.33903 14.2718C4.47272 13.1749 6.1251 12.7466 7.67375 13.148C9.2224 13.5495 10.432 14.7198 10.847 16.2181C11.2619 17.7164 10.8192 19.3151 9.6855 20.4119C6.29405 23.6943 0 22.9206 0 22.9206C1.95609 21.0275 1.88601 19.6619 1.81794 18.3356Z" fill="url(#paint0_linear)"/>
+                <defs>
+                <linearGradient id="paint0_linear" x1="11.7675" y1="2.39672e-07" x2="6.91712" y2="21.8771" gradientUnits="userSpaceOnUse">
+                  <stop stop-color="#BEA988"/>
+                  <stop offset="1" stop-color="#7E7165"/>
+                </linearGradient>
+                </defs>
+              </svg>
+            </a>
+            <a class="button orb is-64x64">
+              <!-- Icon -->
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M22.752 0.0147975C23.0933 -0.0425718 23.4413 0.0689018 23.6857 0.313931C23.93 0.558885 24.0417 0.906344 23.9859 1.24778L22.9139 7.68076C22.8687 7.95307 22.7201 8.19739 22.499 8.36266L10.9836 17L9.56102 15.5772L19.745 5.39169L18.6076 4.25413L8.42362 14.4397L7 13.0169L15.6382 1.50189C15.8036 1.28097 16.0478 1.13235 16.32 1.08696L22.752 0.0147975ZM4.62439 13.0252L10.976 19.3762C11.1775 19.5796 11.4523 19.6933 11.7385 19.6918H14V21.8457H11.7385C10.8759 21.8457 10.0639 21.5097 9.45327 20.898L8.11467 19.5593L3.99224 23.682C3.79114 23.8855 3.51696 24 3.23087 24C2.94477 24 2.67059 23.8855 2.46949 23.682L0.31566 21.528C0.113571 21.3264 0 21.0526 0 20.7671C0 20.4816 0.113571 20.2079 0.31566 20.0062L4.43701 15.8835L3.10056 14.5481C2.49856 13.9439 2.15395 13.1114 2.15395 12.2617V10H4.30778V12.2617C4.30896 12.5479 4.42269 12.8222 4.62439 13.0252Z" fill="url(#paint0_linear)"/>
+                <defs>
+                <linearGradient id="paint0_linear" x1="12" y1="2.77348e-07" x2="6.81261" y2="22.8195" gradientUnits="userSpaceOnUse">
+                  <stop stop-color="#BEA988"/>
+                  <stop offset="1" stop-color="#7E7165"/>
+                </linearGradient>
+                </defs>
+              </svg>
+            </a>
+            <a class="button orb is-64x64">
+              <!-- Icon -->
+              <svg class="icon" width="18" height="24" viewBox="0 0 18 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M7.53669 0.00167781V0.000603646C8.34722 -0.0122491 9.11189 0.180166 9.83213 0.57556C9.83213 0.57556 8.84686 4.21878 9.29177 4.30976C9.73668 4.40074 10.2728 1.09272 10.2728 1.09272C11.6503 1.244 12.2812 1.64826 12.6641 2.13693C13.1114 2.67813 13.0673 2.82213 12.7126 3.15667C12.6436 3.2184 12.5764 3.27974 12.5105 3.34053C12.5099 3.34327 12.5096 3.34319 12.5088 3.34319C11.7737 4.02212 11.237 4.66076 10.9804 5.64883C10.5608 5.58099 9.85519 5.49934 8.83093 5.49934C7.88105 5.49856 7.20684 5.56673 6.77898 5.63006C6.58126 4.41089 6.08893 3.23729 5.18732 2.12764H5.18788C5.18615 2.12585 5.18477 2.12433 5.18338 2.1228C5.18208 2.12137 5.18077 2.11992 5.17916 2.11825C5.00903 1.90948 4.8235 1.70313 4.62355 1.499C4.27765 1.03199 4.54252 0.901403 5.58443 0.398013C6.26211 0.143865 6.91304 0.011544 7.53669 0.00167781Z" fill="url(#paint0_linear)"/>
+                <path d="M6.51862 6.03678C6.93041 5.96548 7.67926 5.87481 8.79826 5.87481C9.99013 5.87579 10.7642 5.98157 11.1574 6.05501C11.2094 6.06371 11.259 6.08222 11.3033 6.10946C11.3477 6.13671 11.3859 6.17216 11.4158 6.21371C11.4457 6.25525 11.4666 6.30208 11.4773 6.35145C11.4881 6.40081 11.4884 6.45173 11.4783 6.50121C11.4682 6.55069 11.4478 6.59775 11.4185 6.63963C11.3891 6.68152 11.3513 6.71739 11.3073 6.74514C11.2633 6.7729 11.2139 6.79197 11.1621 6.80126C11.1102 6.81055 11.057 6.80986 11.0054 6.79924C10.6633 6.73535 9.9407 6.63311 8.79771 6.63311C7.72445 6.63223 7.02381 6.72011 6.66024 6.7831C6.55674 6.80104 6.45001 6.77894 6.36355 6.72166C6.27708 6.66437 6.21796 6.57661 6.19918 6.47764C6.1804 6.37868 6.2035 6.27664 6.26341 6.19397C6.32332 6.11129 6.41512 6.05474 6.51862 6.03678Z" fill="url(#paint1_linear)"/>
+                <path d="M6.40641 7.08985C7.00783 7.03026 8.0831 6.95809 8.84238 6.95809C9.60708 6.9587 10.6901 7.0333 11.2909 7.09402C14.9831 8.31511 17.6842 12.2277 17.6842 16.866C17.6842 22.4811 13.7258 24 8.84238 24C3.95893 24 0 22.4811 0 16.866C0 12.2223 2.70755 8.30606 6.40641 7.08985Z" fill="url(#paint2_linear)"/>
+                <defs>
+                <linearGradient id="paint0_linear" x1="8.84211" y1="2.04572e-07" x2="2.08108" y2="21.9141" gradientUnits="userSpaceOnUse">
+                  <stop stop-color="#BEA988"/>
+                  <stop offset="1" stop-color="#7E7165"/>
+                </linearGradient>
+                <linearGradient id="paint1_linear" x1="8.84211" y1="2.04572e-07" x2="2.08108" y2="21.9141" gradientUnits="userSpaceOnUse">
+                  <stop stop-color="#BEA988"/>
+                  <stop offset="1" stop-color="#7E7165"/>
+                </linearGradient>
+                <linearGradient id="paint2_linear" x1="8.84211" y1="2.04572e-07" x2="2.08108" y2="21.9141" gradientUnits="userSpaceOnUse">
+                  <stop stop-color="#BEA988"/>
+                  <stop offset="1" stop-color="#7E7165"/>
+                </linearGradient>
+                </defs>
+              </svg>
+            </a>
+            <a class="button orb is-64x64">
+              <!-- Icon -->
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M19.5235 1H4.50154C2.02316 1 0 3.02316 0 5.50154V18.0704C0 20.5488 2.02316 22.572 4.50154 22.572H19.4982C21.9766 22.572 23.9998 20.5488 23.9998 18.0704V5.52683C24.0251 3.02316 22.0019 1 19.5235 1ZM18.259 4.99575C19.1695 4.99575 19.9029 5.72914 19.9029 6.63956C19.9029 7.54999 19.1695 8.28338 18.259 8.28338C17.3486 8.28338 16.6152 7.54999 16.6152 6.63956C16.6152 5.72914 17.3486 4.99575 18.259 4.99575ZM19.5235 20.4224H4.50154C3.21177 20.4224 2.1749 19.3855 2.1749 18.0957V15.4909L8.32026 8.46041C8.49728 8.25809 8.80076 8.25809 8.95249 8.46041L12.7206 12.7849C12.7712 12.8608 12.7965 12.9619 12.7965 13.0378L12.316 15.2633C12.2907 15.415 12.493 15.5162 12.5942 15.415L16.3876 11.2423C16.5141 11.1158 16.7164 11.1158 16.8175 11.2423L21.8502 16.7807V18.0704C21.8502 19.3602 20.788 20.4224 19.5235 20.4224Z" fill="url(#paint0_linear)"/>
+                <defs>
+                <linearGradient id="paint0_linear" x1="12" y1="1" x2="7.76876" y2="21.7074" gradientUnits="userSpaceOnUse">
+                  <stop stop-color="#BEA988"/>
+                  <stop offset="1" stop-color="#7E7165"/>
+                </linearGradient>
+                </defs>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

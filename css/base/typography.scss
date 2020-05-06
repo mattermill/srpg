@@ -1,0 +1,18 @@
+@font-face {
+  font-family: 'Room 205';
+  src: url("../assets/Room-205.woff2") format('woff2'), url("../assets/Room-205.woff") format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Rough Cut';
+  src: url("../assets/RoughCut-RegularClean.woff2") format('woff2'), url("../assets/RoughCut-RegularClean.woff") format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+html {
+  font-size: 100%;
+  /*16px*/
+  box-sizing: border-box;
+}

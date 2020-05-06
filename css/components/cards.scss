@@ -1,0 +1,57 @@
+.card {
+  display:flex;
+  flex-direction:column;
+  height:100%;
+  max-width: 100%;
+  background: #FFF;
+  box-shadow: 0 0.5em 1em -.125em rgba(10, 10, 10, .1), 0 0 0 1px rgba(10, 10, 10, .02);
+
+  .card-content {
+    padding: 1.5rem;
+    // text-align:center;
+
+    h1,
+    h2,
+    h3 {
+      margin: 0 auto 0.5em 0;
+    }
+
+    p {
+      margin-bottom:0;
+    }
+
+    .card-title {
+      font-family: $brand-font-2;
+      font-size: 1.5em;
+    }
+  }
+
+  .card-footer {
+    background-color: transparent;
+    border-top: 1px solid #ededed;
+    align-items: stretch;
+    display: flex;
+    margin-top: auto;
+
+    .card-footer-item {
+      align-items: center;
+      display: flex;
+      flex-basis: 0;
+      flex-grow: 1;
+      flex-shrink: 0;
+      justify-content: center;
+      padding: .75rem;
+      margin:0;
+
+      .button {
+        width:100%;
+      }
+
+
+    }
+
+    .card-footer-item:not(:last-child) {
+        border-right: 1px solid #ededed;
+    }
+  }
+}

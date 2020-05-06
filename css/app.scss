@@ -1,0 +1,287 @@
+ // * CH01 - Resets
+ // * CH02 - Typography
+ // * CH03 - Header & Navigation
+ // * CH04 - App UI
+ // * CH05 - Chat
+
+@font-face {
+  font-family: 'Rough Cut';
+  src: url("../assets/RoughCut-RegularClean.woff2") format('woff2'), url("../assets/RoughCut-RegularClean.woff") format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+$primary-color: #E20505;
+$secondary-color: #CEC5AC;
+$link-active: #FFF;
+$brand-font: 'Rough Cut'; // Chat Colors
+$chat-1: #00FF8E;
+$chat-2: #C083EF;
+$chat-3: #F24651;
+$chat-4: #F5FFB6;
+$chat-5: #00FF8E;
+$chat-6: #00FF8E;
+$chat-7: #00FF8E;
+$chat-8: #00FF8E;
+
+.space-between {
+  justify-content: space-between;
+}
+
+.p-0 {padding:0;}
+.p-16 {padding: 16px;}
+.p-24 {padding: 24px;}
+.p-32 {padding: 32px;}
+
+body,
+html {
+  background:#F4F1EC;
+  height: 100%;
+  overflow: hidden;
+}
+
+body#app {
+  background: url("../img/bgs/cave.png") no-repeat;
+  background-size: cover;
+  color: #FFF;
+}
+
+.navbar-brand h1 {
+  font-family: $brand-font;
+  font-size: 1.1rem;
+}
+
+#app #table-nav {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 6e-05) 0%, rgba(36, 38, 41, 0.6) 98.56%), #4B545B;
+  border: 1px solid #23201C;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.16), inset 0 1px 0 #6B7075, inset 0 -2px 2px rgba(0, 0, 0, 0.18);
+  width: 100%;
+  height: 60px;
+  text-shadow: 0 1px rgba(0, 0, 0, 0.4);
+}
+
+#app #table-nav:before {
+  content: '';
+  display: inline-block;
+  width: 47px;
+  height: 45px;
+  float: left;
+  margin-right: -32px;
+  background: url("../img/deco-left.png") no-repeat top left;
+  background-size: contain;
+}
+
+#app #table-nav:after {
+  content: '';
+  display: inline-block;
+  width: 47px;
+  height: 45px;
+  float: left;
+  margin-left: -32px;
+  background: url("../img/deco-right.png") no-repeat top left;
+  background-size: contain;
+}
+
+#app #table-nav a {
+  color: $secondary-color;
+}
+
+#scene-nav .scene-link {
+  text-align: center;
+  width: 240px;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 4e-05) 0%, rgba(12, 14, 17, 0.4) 98.56%), #3F484F;
+  border: 1px solid #1D2429;
+}
+
+#scene-nav .scene-link:hover {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 6.4e-05) 0%, rgba(12, 14, 17, 0.64) 98.56%), #3F484F;
+  border: 1px solid #1D2429;
+}
+
+#scene-nav h2 {
+  font-size: 0.6rem;
+  text-transform: uppercase;
+}
+
+#scene-nav h3 {
+  font-family: $brand-font;
+  font-size: 0.9rem;
+  color: #FFF;
+}
+
+.navbar-start {
+  flex-grow: 1;
+  justify-content: center;
+}
+
+.navbar-dropdown {
+  background: rgba(0, 0, 0, 0.8);
+  border: 1px solid #1D2429;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.16);
+}
+
+#table-nav a.link-active,
+span.link-active {
+  color: $link-active;
+}
+
+#scene-switcher div {
+  margin: auto 0;
+}
+
+.navbar-dropdown a.navbar-item:hover {
+  background: #5B5C59;
+}
+
+// Begin App
+
+#app-ui {
+  flex-direction: column;
+  justify-content: space-between;
+  height: calc(100% - 48px);
+}
+
+#screen-bottom .columns {
+  align-items: baseline;
+}
+
+#table-controls {
+  justify-content: space-between;
+}
+
+.portrait {
+  text-align: center;
+  font-size: 0.7rem;
+  text-shadow: 0 1px rgba(0, 0, 0, 0.6);
+}
+
+.gm-portrait,
+.player-portrait {
+  width: 48px;
+  height: 48px;
+  position: relative;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+  margin-bottom: 6px;
+}
+
+.player-portrait:before {
+  content: '';
+  display: inline-block;
+  width: 48px;
+  height: 48px;
+  background: url("../img/portrait-border-player.png") no-repeat top left;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+@keyframes bloodied {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 0.2;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+.near-death:after {
+  content: '';
+  display: inline-block;
+  width: 48px;
+  height: 48px;
+  background-color: #FF0000;
+  position: absolute;
+  top: 0;
+  left: 0;
+  animation-name: bloodied;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+}
+
+.gm-portrait:before {
+  content: '';
+  display: inline-block;
+  width: 48px;
+  height: 48px;
+  background: url("../img/portrait-border-gm.png") no-repeat top left;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.is-logged-in {
+  font-size: 0.9rem;
+}
+// Begin Toolset
+#tools .column {
+  text-align: center;
+}
+
+.orb {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 6e-05) 0%, rgba(36, 38, 41, 0.6) 98.56%), #4B545B;
+  border: 1px solid #23201C;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.16), inset 0 1px 0 #6B7075, inset 0 -2px 2px rgba(0, 0, 0, 0.18);
+  border-radius: 50%;
+  text-align: center;
+  display: inline-block;
+}
+
+#d20 {
+  width: 80px;
+  height: 80px;
+  padding: 22px;
+}
+
+.small-orb {
+  width: 48px;
+  height: 48px;
+  padding: 12px;
+}
+
+// * CH05 - Chat
+
+#chat {
+  margin-top:auto;
+  background: rgba(30, 35, 39, 0.8);
+  border: 2px solid #7E7165;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+ul#messages {
+  width:440px;
+  height:200px;
+  display:flex;
+  flex-direction: column;
+  overflow:auto;
+  transform: scaleY(-1);
+  margin-bottom:6px;
+
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.3) transparent;
+
+  li {
+    transform: scaleY(-1);
+  }
+}
+
+#send-message {
+  background: rgba(20, 25, 30, 0.8);
+  color:#FFF;
+
+  &::placeholder {
+    color:#AAA;
+  }
+}
+
+#health {
+  width:200px;
+  height:200px;
+  background:#FF0000;
+  margin-top:auto;
+}

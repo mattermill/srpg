@@ -1,0 +1,18 @@
+<svg width="1440" height="524" viewBox="0 0 1440 524" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0)">
+<rect y="464" width="1440" height="60" fill="#D12020"/>
+<rect opacity="0.6" y="404" width="1440" height="60" fill="#FCFCFC"/>
+<rect y="344" width="1440" height="60" fill="#D12020"/>
+<rect opacity="0.6" y="284" width="1440" height="60" fill="#FCFCFC"/>
+<rect y="224" width="1440" height="60" fill="#D12020"/>
+<rect y="104" width="1440" height="60" fill="#D12020"/>
+<rect opacity="0.6" y="164" width="1440" height="60" fill="#FCFCFC"/>
+<rect opacity="0.6" y="44" width="1440" height="60" fill="#FCFCFC"/>
+<path d="M-5.72205e-06 0H1440V524C1440 524 422.039 673.584 120 411C-102 218 -5.72205e-06 0 -5.72205e-06 0Z" fill="#182239"/>
+</g>
+<defs>
+<clipPath id="clip0">
+<rect width="1440" height="524" fill="white"/>
+</clipPath>
+</defs>
+</svg>

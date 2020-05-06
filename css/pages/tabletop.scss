@@ -1,0 +1,217 @@
+.chat-color-1 {color:$chat-color-1;}
+.chat-color-2 {color:$chat-color-2;}
+.chat-color-3 {color:$chat-color-3;}
+.chat-color-4 {color:$chat-color-4;}
+.chat-color-5 {color:$chat-color-5;}
+.chat-color-6 {color:$chat-color-6;}
+.chat-color-7 {color:$chat-color-7;}
+.chat-color-8 {color:$chat-color-8;}
+.chat-color-9 {color:$chat-color-9;}
+.chat-color-10 {color:$chat-color-10;}
+.chat-color-11 {color:$chat-color-11;}
+.chat-color-12 {color:$chat-color-12;}
+
+
+body#tabletop {
+  background:$tertiary url('../img/bgs/cave.png') no-repeat top left;
+  background-attachment: fixed;
+  background-size: cover;
+  color:#FFF;
+}
+
+#app-header {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 6e-05) 0%, rgba(36, 38, 41, 0.6) 98.56%), #4B545B;
+  border: 1px solid #23201C;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.16), inset 0 1px 0 #6B7075, inset 0 -2px 2px rgba(0, 0, 0, 0.18);
+  color: #FFF;
+  display: flex;
+  font-family: 'Rough Cut';
+  flex: 0 1 auto;
+  text-shadow: 0 1px rgba(0, 0, 0, 0.4);
+  padding: 8px;
+  align-items: stretch;
+
+}
+
+// Player Portraits
+
+#active-players {
+    margin:0 auto;
+}
+
+.portrait {
+  text-align: center;
+  font-size: 0.7rem;
+  text-shadow: 0 1px rgba(0, 0, 0, 0.6);
+  width: 48px;
+  height: 48px;
+  box-sizing: content-box;
+}
+
+.gm-portrait,
+.player-portrait {
+  width: inherit;
+  height: inherit;
+  position: relative;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+  margin-bottom: 6px;
+}
+
+.player-portrait:before {
+  content: '';
+  display: inline-block;
+  width: inherit;
+  height: inherit;
+  background: url("../img/portrait-border-player.png") no-repeat top left;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+@keyframes bloodied {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 0.2;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+.near-death:after {
+  content: '';
+  display: inline-block;
+  width: 48px;
+  height: 48px;
+  background-color: #FF0000;
+  position: absolute;
+  top: 0;
+  left: 0;
+  animation-name: bloodied;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+}
+
+.gm-portrait:before {
+  content: '';
+  display: inline-block;
+  width: 48px;
+  height: 48px;
+  background: url("../img/portrait-border-gm.png") no-repeat top left;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+// * CH05 - Chat
+
+#chat {
+  position:absolute;
+  left:24px;
+  bottom:24px;
+  background: rgba(30, 35, 39, 0.8);
+  border: 2px solid #7E7165;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+#messages {
+	width:500px;
+	height:200px;
+	display:flex;
+	flex-direction: column;
+	overflow:auto;
+	transform: scaleY(-1);
+	font-size:.9em;
+
+	.chat-message {
+		display:flex;
+		padding:4px 12px;
+		align-items: flex-start;
+		
+		&:last-child {
+			padding-top:12px;
+		}
+
+		p {
+			margin:0;
+		}
+
+		.portrait {
+			width:32px;
+			height:32px;
+		}
+	}
+
+	.row {
+	transform: scaleY(-1);
+	}
+
+	figure.media-left {
+		width:32px;
+		margin:0 12px 0 0;
+	}
+	
+	.emote {
+		font-style: italic;
+	}
+
+	.message-content {
+		align-self:center;
+		line-height:1.4em;
+	}
+	
+	.roll {
+		background:rgba(0, 0, 0, 0.4);
+		padding:4px;
+		border-radius:4px;
+		color:#AFAFAF;
+		display:inline-block;
+		position:relative;
+	}
+	.roll-total {
+		font-size:1.2em;
+		padding:4px 8px;
+		background:rgba(0, 0, 0, 0.4);
+		font-family:$brand-font-2;
+		border-radius:6px;
+	}
+	.roll-total.nat-20 {
+		background:$primary;
+	}
+	scrollbar-width: thin;
+	scrollbar-color: rgba(255, 255, 255, 0.3) transparent;
+}
+
+#send-message {
+	width:100%;
+	background: rgba(20, 25, 30, 0.8);
+	box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.3);
+	border-radius:0;
+	color:#FFF;
+
+	&::placeholder {
+	color:#AAA;
+  }
+}
+
+
+// Actionbar
+
+#actionbar {
+	position:absolute;
+	bottom:24px;
+	right:24px;
+}
+
+#health {
+  width:200px;
+  height:200px;
+  background:#FF0000;
+  margin-top:auto;
+}

@@ -1,0 +1,676 @@
+a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, body, canvas, caption, center, cite, code, dd, del, details, dfn, div, dl, dt, em, embed, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, html, i, iframe, img, ins, kbd, label, legend, li, mark, menu, nav, object, ol, output, p, pre, q, ruby, s, samp, section, small, span, strike, strong, sub, summary, sup, table, tbody, td, tfoot, th, thead, time, tr, tt, u, ul, var, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:after, blockquote:before, q:after, q:before {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+@font-face {
+  font-family: "Room 205";
+  src: url("../assets/Room-205.woff2") format("woff2"), url("../assets/Room-205.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Rough Cut";
+  src: url("../assets/RoughCut-RegularClean.woff2") format("woff2"), url("../assets/RoughCut-RegularClean.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+html {
+  font-size: 100%;
+  /*16px*/
+  box-sizing: border-box;
+}
+
+.view-index .button {
+  margin-top: -1px;
+}
+
+.buttons a {
+  margin-right: 0.5em;
+}
+.buttons a:last-child {
+  margin-right: 0;
+}
+
+.button {
+  font-family: "Rough Cut";
+  display: inline-flex;
+  justify-content: center;
+  vertical-align: middle;
+  text-align: center;
+  text-decoration: none;
+  padding: 0.5em 1em;
+  font-size: 1em;
+  position: relative;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  cursor: pointer;
+}
+
+.button.is-primary {
+  color: #FFF;
+}
+.button.is-primary:before {
+  content: "";
+  position: absolute;
+  border: #D90429 solid 1px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: top, right, bottom, left;
+  transition-property: top, right, bottom, left;
+}
+.button.is-primary:active:before, .button.is-primary:focus:before, .button.is-primary:hover:before {
+  top: -4px;
+  right: -4px;
+  bottom: -4px;
+  left: -4px;
+}
+.button.is-primary:hover {
+  background: #C60022;
+}
+
+.button.is-light {
+  border: #CEC5AC 1px solid;
+  color: #998D76;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+}
+.button.is-light:hover {
+  background: #CEC5AC;
+  color: #000;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+}
+
+.button.is-dark {
+  background: rgba(255, 255, 255, 0.15);
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+}
+.button.is-dark:hover {
+  background: rgba(255, 255, 255, 0.2);
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  color: #FFF;
+}
+
+.orb {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.00006) 0%, rgba(36, 38, 41, 0.6) 98.56%), #4B545B;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.6), inset 0px 2px 12px #000000, inset 0px -2px 2px rgba(0, 0, 0, 0.18);
+  border-radius: 50%;
+  text-align: center;
+  align-items: center;
+  padding: 0;
+}
+.orb:before {
+  content: "";
+  display: inline-block;
+  width: 64px;
+  height: 64px;
+  background: url("../img/orb-border-64.svg") no-repeat top left;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.orb.is-64x64 {
+  width: 64px;
+  height: 64px;
+  padding: 0;
+}
+.orb.is-64x64:hover {
+  background: linear-gradient(180deg, #D90429 0%, #7B0015 100%);
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+}
+.orb.is-64x64:hover svg {
+  fill: #FFF;
+}
+.orb.is-64x64:hover:before {
+  background-position: -64px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  max-width: 100%;
+  background: #FFF;
+  box-shadow: 0 0.5em 1em -0.125em rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.02);
+}
+.card .card-content {
+  padding: 1.5rem;
+}
+.card .card-content h1,
+.card .card-content h2,
+.card .card-content h3 {
+  margin: 0 auto 0.5em 0;
+}
+.card .card-content p {
+  margin-bottom: 0;
+}
+.card .card-content .card-title {
+  font-family: "Rough Cut";
+  font-size: 1.5em;
+}
+.card .card-footer {
+  background-color: transparent;
+  border-top: 1px solid #ededed;
+  align-items: stretch;
+  display: flex;
+  margin-top: auto;
+}
+.card .card-footer .card-footer-item {
+  align-items: center;
+  display: flex;
+  flex-basis: 0;
+  flex-grow: 1;
+  flex-shrink: 0;
+  justify-content: center;
+  padding: 0.75rem;
+  margin: 0;
+}
+.card .card-footer .card-footer-item .button {
+  width: 100%;
+}
+.card .card-footer .card-footer-item:not(:last-child) {
+  border-right: 1px solid #ededed;
+}
+
+body {
+  background: #F4F1EC url("../img/bgs/rune-bg.png") no-repeat;
+  background-position: 150% 100px;
+  background-attachment: fixed;
+  background-size: 50%;
+}
+
+.chat-color-1 {
+  color: #00e5ff;
+}
+
+.chat-color-2 {
+  color: #f44336;
+}
+
+.chat-color-3 {
+  color: #00e676;
+}
+
+.chat-color-4 {
+  color: #b388ff;
+}
+
+.chat-color-5 {
+  color: #ffc107;
+}
+
+.chat-color-6 {
+  color: #ff5722;
+}
+
+.chat-color-7 {
+  color: #8bc34a;
+}
+
+.chat-color-8 {
+  color: #607d8b;
+}
+
+.chat-color-9 {
+  color: #2196f3;
+}
+
+.chat-color-10 {
+  color: #69f0ae;
+}
+
+.chat-color-11 {
+  color: #18ffff;
+}
+
+.chat-color-12 {
+  color: #cddc39;
+}
+
+body#tabletop {
+  background: #2D333D url("../img/bgs/cave.png") no-repeat top left;
+  background-attachment: fixed;
+  background-size: cover;
+  color: #FFF;
+}
+
+#app-header {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.00006) 0%, rgba(36, 38, 41, 0.6) 98.56%), #4B545B;
+  border: 1px solid #23201C;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.16), inset 0 1px 0 #6B7075, inset 0 -2px 2px rgba(0, 0, 0, 0.18);
+  color: #FFF;
+  display: flex;
+  font-family: "Rough Cut";
+  flex: 0 1 auto;
+  text-shadow: 0 1px rgba(0, 0, 0, 0.4);
+  padding: 8px;
+  align-items: stretch;
+}
+
+#active-players {
+  margin: 0 auto;
+}
+
+.portrait {
+  text-align: center;
+  font-size: 0.7rem;
+  text-shadow: 0 1px rgba(0, 0, 0, 0.6);
+  width: 48px;
+  height: 48px;
+  box-sizing: content-box;
+}
+
+.gm-portrait,
+.player-portrait {
+  width: inherit;
+  height: inherit;
+  position: relative;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+  margin-bottom: 6px;
+}
+
+.player-portrait:before {
+  content: "";
+  display: inline-block;
+  width: inherit;
+  height: inherit;
+  background: url("../img/portrait-border-player.png") no-repeat top left;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+@keyframes bloodied {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.near-death:after {
+  content: "";
+  display: inline-block;
+  width: 48px;
+  height: 48px;
+  background-color: #FF0000;
+  position: absolute;
+  top: 0;
+  left: 0;
+  animation-name: bloodied;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+}
+
+.gm-portrait:before {
+  content: "";
+  display: inline-block;
+  width: 48px;
+  height: 48px;
+  background: url("../img/portrait-border-gm.png") no-repeat top left;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#chat {
+  position: absolute;
+  left: 24px;
+  bottom: 24px;
+  background: rgba(30, 35, 39, 0.8);
+  border: 2px solid #7E7165;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+#messages {
+  width: 500px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+  transform: scaleY(-1);
+  font-size: 0.9em;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.3) transparent;
+}
+#messages .chat-message {
+  display: flex;
+  padding: 4px 12px;
+  align-items: flex-start;
+}
+#messages .chat-message:last-child {
+  padding-top: 12px;
+}
+#messages .chat-message p {
+  margin: 0;
+}
+#messages .chat-message .portrait {
+  width: 32px;
+  height: 32px;
+}
+#messages .row {
+  transform: scaleY(-1);
+}
+#messages figure.media-left {
+  width: 32px;
+  margin: 0 12px 0 0;
+}
+#messages .emote {
+  font-style: italic;
+}
+#messages .message-content {
+  align-self: center;
+  line-height: 1.4em;
+}
+#messages .roll {
+  background: rgba(0, 0, 0, 0.4);
+  padding: 4px;
+  border-radius: 4px;
+  color: #AFAFAF;
+  display: inline-block;
+  position: relative;
+}
+#messages .roll-total {
+  font-size: 1.2em;
+  padding: 4px 8px;
+  background: rgba(0, 0, 0, 0.4);
+  font-family: "Rough Cut";
+  border-radius: 6px;
+}
+#messages .roll-total.nat-20 {
+  background: #D90429;
+}
+
+#send-message {
+  width: 100%;
+  background: rgba(20, 25, 30, 0.8);
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.3);
+  border-radius: 0;
+  color: #FFF;
+}
+#send-message::placeholder {
+  color: #AAA;
+}
+
+#actionbar {
+  position: absolute;
+  bottom: 24px;
+  right: 24px;
+}
+
+#health {
+  width: 200px;
+  height: 200px;
+  background: #FF0000;
+  margin-top: auto;
+}
+
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+
+body,
+html {
+  height: 100%;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  line-height: 1.65;
+  color: #000;
+}
+
+a {
+  cursor: pointer;
+}
+
+p {
+  margin-bottom: 1.15rem;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+.is-24x24 {
+  width: 24px;
+  height: 24px;
+}
+
+.is-48x48 {
+  width: 48px;
+  height: 48px;
+}
+
+.media-left {
+  flex: 0 0 auto;
+}
+
+.page {
+  display: flex;
+  flex-flow: column;
+  height: 100%;
+}
+
+.row {
+  display: flex;
+}
+
+.col {
+  display: block;
+  flex: 1 1 0;
+  padding: 0.75rem;
+}
+
+.wrap {
+  flex-wrap: wrap;
+}
+
+.is-narrow {
+  flex: none;
+}
+
+.is-half {
+  flex: 0 0 50%;
+}
+
+.is-1 {
+  flex: 0 0 8.33333%;
+}
+
+.is-4 {
+  flex: 0 0 16.6666%;
+}
+
+.is-8 {
+  flex: 0 0 66.6666%;
+}
+
+.center-x {
+  justify-content: center;
+}
+
+.center-y {
+  align-items: center;
+}
+
+.push-1 {
+  margin-left: 8.3333%;
+}
+
+.p-0 {
+  padding: 0;
+}
+
+.container {
+  max-width: 1260px;
+  flex: 1 1 auto;
+  align-self: center;
+  width: 100%;
+  padding-top: 3em;
+  padding-bottom: 4em;
+  position: relative;
+  border-left: 1px solid #DCD9D4;
+}
+.container h1 {
+  font-family: "Room 205";
+  font-size: 5em;
+  line-height: 100%;
+}
+.container::after {
+  content: "";
+  display: inline-block;
+  width: 16px;
+  height: 25px;
+  background: transparent url("../img/rune-01.png") no-repeat;
+  background-size: 100%;
+  position: absolute;
+  top: 64px;
+  right: 32px;
+}
+
+.is-primary {
+  background: #D90429;
+  color: #FFF;
+}
+
+.image {
+  display: block;
+  position: relative;
+}
+
+.is-16x9 {
+  padding-top: 56.25%;
+}
+
+#global-header {
+  background: #000;
+  color: #FFF;
+  display: flex;
+  font-family: "Rough Cut";
+  flex: 0 1 auto;
+  padding: 12px;
+  align-items: stretch;
+}
+
+.navbar-brand {
+  align-items: stretch;
+  display: flex;
+}
+
+.navbar-menu {
+  display: flex;
+  flex: 1;
+}
+
+.navbar-start {
+  display: flex;
+  flex: 1;
+  align-items: center;
+}
+
+.navbar-end {
+  display: flex;
+}
+
+.navbar-item {
+  display: flex;
+  flex-grow: 0;
+  flex-shrink: 0;
+  align-items: center;
+  line-height: 1.5em;
+  padding: 0.5rem 0.75rem;
+  color: #CEC5AC;
+  text-decoration: none;
+}
+
+a.navbar-item:hover {
+  color: #FFF;
+}
+
+#global-footer {
+  background: #2D333D;
+  color: #FFF;
+}
+
+h1.page-title {
+  font-size: 6em;
+  text-transform: uppercase;
+  margin-bottom: 0.25em;
+}
+
+h2.module-header {
+  font-family: "Rough Cut";
+  font-size: 1.5em;
+}
+
+.stretch {
+  height: 100%;
+  align-content: stretch;
+}
+
+.input, .textarea, .dropdown, .select {
+  font-size: 1em;
+}
+
+.input {
+  box-shadow: inset 0 0.0625em 0.125em;
+  padding: 12px;
+  max-width: 100%;
+  border: 1px solid transparent;
+}
+
+.input.is-active, .input:focus, .textarea:focus, .input:active, .textarea:active {
+  border-color: #3273dc;
+  box-shadow: 0 0 0 0.125em rgba(50, 115, 220, 0.25);
+}
