@@ -41,12 +41,6 @@
 		"oAP": "/build/assets/RoughCut-RegularClean.woff2",
 		"oF": 0
 		},
-	"/build": {
-		"ft": 65536,
-		"oA": 1,
-		"oAP": "/build/build",
-		"oF": 0
-		},
 	"/createcampaign.html": {
 		"cB": 0,
 		"ft": 8192,
@@ -285,6 +279,28 @@
 		"oT": 1,
 		"q": 100
 		},
+	"/img/cursor-default.png": {
+		"ft": 32768,
+		"iS": 3333,
+		"oA": 0,
+		"oAP": "/build/img/cursor-default.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"oT": 1,
+		"q": 100
+		},
+	"/img/cursor-pointer.png": {
+		"ft": 32768,
+		"iS": 4917,
+		"oA": 0,
+		"oAP": "/build/img/cursor-pointer.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"oT": 1,
+		"q": 100
+		},
 	"/img/deco-left.png": {
 		"ft": 32768,
 		"iS": 6928,
@@ -403,6 +419,14 @@
 		"opt": 1,
 		"q": 100
 		},
+	"/img/working/Cursor.psd": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/build/img/working/Cursor.psd",
+		"oF": 0
+		},
 	"/index.html": {
 		"cB": 0,
 		"ft": 8192,
@@ -506,7 +530,7 @@
 	"displayValueWasSetByUser": 0,
 	"iconImageName": "brackets-koamaru",
 	"iconImageWasSetByUser": 0,
-	"lastBuiltDate": 610178154.99688697
+	"lastBuiltDate": 610584643.16653502
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,

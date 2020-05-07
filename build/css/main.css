@@ -269,9 +269,14 @@ body {
 
 body#tabletop {
   background: #2D333D url("../img/bgs/cave.png") no-repeat top left;
+  cursor: url("../img/cursor-pointer.png"), auto;
   background-attachment: fixed;
   background-size: cover;
   color: #FFF;
+}
+
+* a, .buttons, .button, .orb {
+  cursor: url("../img/cursor-pointer.png"), pointer;
 }
 
 #app-header {
@@ -440,8 +445,9 @@ body#tabletop {
 
 #actionbar {
   position: absolute;
+  left: 50%;
+  transform: translate(-50%);
   bottom: 24px;
-  right: 24px;
 }
 
 #health {
