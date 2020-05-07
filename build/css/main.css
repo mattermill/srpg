@@ -275,7 +275,7 @@ body#tabletop {
   color: #FFF;
 }
 
-* a, .buttons, .button, .orb {
+#tabletop a, #tabletop .buttons, #tabletop .button, #tabletop .orb {
   cursor: url("../img/cursor-pointer.png"), pointer;
 }
 
